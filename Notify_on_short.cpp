@@ -99,8 +99,8 @@ void setup() {
   }
 }
 
-void main() {
-  if(digitalread(Input_pin) == 0)  {
+void loop() {
+  if(digitalRead(Input_pin) == 0)  {
     String smsMessage = "ESP32 Notifying message.";
     if(modem.sendSMS(SMS_TARGET, smsMessage)){
         SerialMon.println(smsMessage);
