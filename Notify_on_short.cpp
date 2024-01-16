@@ -108,8 +108,11 @@ void loop() {
     else{
         SerialMon.println("SMS failed to send");
     }
+    while(digitalRead(Input_pin) == 0) {
+      delay(1000);
+    }
   }
   else {
-    delay(10);
+    delay(1000);
   }
 }
